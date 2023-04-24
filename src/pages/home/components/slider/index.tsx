@@ -29,10 +29,8 @@ const arrOfSlides: any = [
 ]
 
 const SLIDER: FC = () => {
-
+    // need to add pagination
     useEffect(() => {
-
-        // const data = [SLIDER1, SLIDER2, SLIDER3]; 
 
         const slides = document.querySelectorAll('[data-name="slide"]');
 
@@ -131,8 +129,6 @@ const SLIDER: FC = () => {
 
                 <CONTACTFORM />
             </div>
-            <button data-btn="prev-btn">prev</button>
-            <button data-btn="next-btn">next</button>
         </section>
     )
 }
