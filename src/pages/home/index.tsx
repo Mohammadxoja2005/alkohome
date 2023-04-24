@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+// layouts
+import HEADER from '../../layouts/header';
 
 const HOME = () => {
     return (
-        <div>this is home part</div>
+        <Fragment>
+            <HEADER />
+        </Fragment>
     )
 }
 

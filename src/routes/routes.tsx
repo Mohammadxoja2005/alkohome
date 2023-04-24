@@ -1,5 +1,5 @@
 import React from "react";
-import { createBrowserRouter, useNavigate } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 
 // pages
 import HOME from "../pages/home";

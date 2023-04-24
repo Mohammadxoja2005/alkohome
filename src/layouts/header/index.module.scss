@@ -1,0 +1,61 @@
+header {
+  width: 100%;
+  background-color: white;
+  padding: 20px 0 10px 0;
+}
+
+.header_container {
+  max-width: 1280px;
+  margin: auto;
+}
+
+.header_navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header_logo {
+  display: flex;
+  align-items: center;
+}
+
+.header_menu {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+
+.header_menu_title {
+  list-style: none;
+}
+
+.header_menu_href {
+  text-decoration: none;
+  color: black;
+  font-size: 24px;
+  font-family: montserrat-regular;
+  font-weight: 400;
+} 
+
+.header_contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}  
+
+.header_contact_name {
+    font-family: montserrat-regular;
+    font-size: 20px;
+    color: black;
+    font-weight: 400;
+    margin-bottom: 10px;
+
+}
+
+.header_contact_socials {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+}
