@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, FC} from 'react'
 // styles
 import styles from "./index.module.scss";
 // icons
@@ -10,7 +10,7 @@ import PHONE from "../../assets/icons/phone.png";
 import VK from "../../assets/icons/vk.png";
 import RAW1 from "../../assets/images/raw5.png"
 
-const HEADER = () => {
+const HEADER: FC = () => {
     return (
         <Fragment>
             <header>
