@@ -5,6 +5,9 @@ import HEADER from '../../layouts/header';
 import SLIDER from './components/slider';
 import ORDER from './components/order';
 import PRODUCT from './components/product';
+import CERTIFICATE from './components/certificate';
+import REVIEW from './components/review';
+import PARTNER from './components/partner';
 
 const HOME: FC = () => {
     return (
@@ -13,6 +16,9 @@ const HOME: FC = () => {
             <SLIDER />
             <ORDER />
             <PRODUCT />
+            <CERTIFICATE />
+            <REVIEW />
+            <PARTNER />
         </Fragment>
     )
 }

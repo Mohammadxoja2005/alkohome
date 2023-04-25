@@ -1,0 +1,36 @@
+.partner {
+  max-width: 1440px;
+  margin: 50px auto;
+}
+
+.partner_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  max-width: 1280px;
+}
+
+.partner_title {
+  font-size: 40px;
+  font-family: montserrat-bold;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.partner_contact {
+  display: flex;
+  align-items: flex-start;
+}
+
+.partner_contact_title {
+  font-size: 32px;
+  font-family: montserrat-regular;
+  font-weight: 400;
+  max-width: 600px;
+}
+
+.partner_contact_title_bold {
+  font-family: montserrat-bold;
+  font-weight: 700;
+}

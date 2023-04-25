@@ -1,0 +1,36 @@
+.ser {
+  width: 100%;
+  max-width: 1440px;
+  margin: 50px auto;
+}
+
+.ser_container {
+  max-width: 1280px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.ser_title {
+  font-size: 40px;
+  font-family: montserrat-bold;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.ser_img_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 50px;
+  max-width: 1165px;
+  margin: auto;
+}
+
+.ser_img {
+  width: 245px;
+  height: 322px;
+}
+
+.ser_img img {
+  object-fit: cover;
+}
