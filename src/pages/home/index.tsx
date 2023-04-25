@@ -4,6 +4,7 @@ import HEADER from '../../layouts/header';
 // components
 import SLIDER from './components/slider';
 import ORDER from './components/order';
+import PRODUCT from './components/product';
 
 const HOME: FC = () => {
     return (
@@ -11,6 +12,7 @@ const HOME: FC = () => {
             <HEADER />
             <SLIDER />
             <ORDER />
+            <PRODUCT />
         </Fragment>
     )
 }
