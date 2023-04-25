@@ -8,6 +8,7 @@ import PRODUCT from './components/product';
 import CERTIFICATE from './components/certificate';
 import REVIEW from './components/review';
 import PARTNER from './components/partner';
+import STEP from './components/step';
 
 const HOME: FC = () => {
     return (
@@ -19,6 +20,7 @@ const HOME: FC = () => {
             <CERTIFICATE />
             <REVIEW />
             <PARTNER />
+            <STEP />
         </Fragment>
     )
 }
