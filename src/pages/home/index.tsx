@@ -9,6 +9,7 @@ import CERTIFICATE from './components/certificate';
 import REVIEW from './components/review';
 import PARTNER from './components/partner';
 import STEP from './components/step';
+import FOOTER from '../../layouts/footer';
 
 const HOME: FC = () => {
     return (
@@ -21,6 +22,7 @@ const HOME: FC = () => {
             <REVIEW />
             <PARTNER />
             <STEP />
+            <FOOTER />
         </Fragment>
     )
 }
