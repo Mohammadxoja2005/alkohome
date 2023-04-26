@@ -62,6 +62,9 @@ const PRODUCT: FC = () => {
                                     <p className={styles.product_single_des}>
                                         {product.description}
                                     </p>
+                                    <div className={styles.product_single_detail_btn} >
+                                        Подробнее
+                                    </div>
                                 </div>
                             )
                         })}

@@ -82,41 +82,9 @@ const SLIDER: FC = () => {
     return (
         <section className={styles.slider}>
             <div className={styles.slider_container}>
-
-                {/* <Swiper
-                    effect={'coverflow'}
-                    centeredSlides={true}
-                    slidesPerView={1.2}
-                    coverflowEffect={{
-                        rotate: 0,
-                        stretch: 0,
-                        depth: 100,
-                        modifier: 3,
-                        slideShadows: true,
-                    }}
-                    loop={true}
-                    // autoplay={{
-                    //     delay: 4000,
-                    //     disableOnInteraction: false,
-                    // }}
-                    pagination={{
-                        el: styles.swiper_pagination,
-                        clickable: true,
-                        // bulletClass: styles.swiper_pagination_bullet,
-
-                    }}
-                    observer={true}
-                    observeParents={true}
-                    className={styles.swiper}
-                >
-                    <SwiperSlide className={styles.swiper_slide} ><img src={SLIDER1} alt="" className={styles.slider_slide_img} /></SwiperSlide>
-                    <SwiperSlide className={styles.swiper_slide} ><img src={SLIDER2} alt="" className={styles.slider_slide_img} /></SwiperSlide>
-                    <SwiperSlide className={styles.swiper_slide} ><img src={SLIDER3} alt="" className={styles.slider_slide_img} /></SwiperSlide>
-                </Swiper> */}
-
                 <div className={styles.slider_slides}>
 
-                    <div data-name="slide" >
+                    <div data-name="slide">
                         <img src={SLIDER2} alt="" className={styles.slider_slide_img} />
                     </div>
                     <div data-name="slide">

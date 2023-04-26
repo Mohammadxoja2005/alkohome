@@ -15,14 +15,14 @@ const HOME: FC = () => {
     return (
         <Fragment>
             <HEADER />
-            <SLIDER />
+            {/* <SLIDER /> */}
             <ORDER />
             <PRODUCT />
-            <CERTIFICATE />
+            {/* <CERTIFICATE />
             <REVIEW />
             <PARTNER />
             <STEP />
-            <FOOTER />
+            <FOOTER /> */}
         </Fragment>
     )
 }

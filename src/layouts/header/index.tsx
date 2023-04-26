@@ -1,4 +1,4 @@
-import React, { Fragment, FC} from 'react'
+import React, { Fragment, FC } from 'react'
 // styles
 import styles from "./index.module.scss";
 // icons
@@ -8,12 +8,13 @@ import TELEGRAM from "../../assets/icons/telegram.png";
 import SMS from "../../assets/icons/sms.png";
 import PHONE from "../../assets/icons/phone.png";
 import VK from "../../assets/icons/vk.png";
-import RAW1 from "../../assets/images/raw5.png"
+import RAW1 from "../../assets/images/raw5.png";
+import FLOWER from "../../assets/icons/flower.png";
 
 const HEADER: FC = () => {
     return (
         <Fragment>
-            <header>
+            <header className={styles.header_large_screen}>
                 <div className={styles.header_container}>
                     <nav className={styles.header_navbar}>
 
@@ -40,6 +41,20 @@ const HEADER: FC = () => {
                             </div>
                         </div>
                     </nav>
+                </div>
+            </header>
+
+            <header className={styles.header_small_screen}>
+                <div className={styles.header_small_container}>
+                    <a href="/" className={styles.header_logo}>
+                        <img src={LOGO} alt="alkohome" title='alkohome-logo' />
+                        <img src={LOGONAME} alt="alkohome" title='alkhome-name' />
+                    </a>
+                    <div className={styles.header_small_screen_trigger}>
+                        <div className={styles.header_small_screen_line_f}></div>
+                        <img src={FLOWER} alt="" />
+                        <div className={styles.header_small_screen_line_s}></div>
+                    </div>
                 </div>
             </header>
 

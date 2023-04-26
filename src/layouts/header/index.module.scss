@@ -1,7 +1,14 @@
 header {
   width: 100%;
   background-color: white;
-  padding: 20px 0 10px 0;
+  padding: 20px 28px 10px 28px;
+  position: sticky;
+  top: 0px;
+  z-index: 999;
+}
+
+.header_small_screen {
+  display: none;
 }
 
 .header_container {
@@ -67,4 +74,54 @@ header {
 .pattern_img {
   width: 100%;
   object-fit: cover;
+}
+
+@media screen and (max-width: 992px) {
+  .header_menu_href {
+    font-size: 16px;
+  }
+
+  .header_contact_name {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 796px) {
+  .header_large_screen {
+    display: none;
+  }
+
+  .header_small_screen {
+    display: block;
+  }
+
+  .header_small_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header_small_screen_trigger {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    padding: 12px;
+    border-radius: 8px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .header_small_screen_line_f {
+    width: 100%;
+    height: 1px;
+    background-color: white;
+  }
+
+  .header_small_screen_line_s {
+    width: 100%;
+    height: 1px;
+    background-color: white;
+  }
 }

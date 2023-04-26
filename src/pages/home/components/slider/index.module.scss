@@ -8,26 +8,9 @@
   margin: auto;
   display: flex;
   justify-content: space-between;
+  gap: 50px;
+  padding: 0 28px;
 }
-
-// .slider_slides {
-//   position: relative;
-// }
-
-// .slider_slide1 {
-//   width: 550px;
-//   height: 350px;
-// }
-
-// .slider_slide2 {
-//   width: 150px;
-//   height: 280px;
-// }
-
-// .slider_slide3 {
-//   width: 150px;
-//   height: 280px;
-// }
 
 .slider_slide_img {
   width: 100%;
@@ -36,50 +19,20 @@
   border-radius: 20px;
 }
 
-// .slider_slides {
-//   position: relative;
-//   display: flex;
-//   align-items: center;
-// }
-
-// .slider_slide_prev {
-//   position: absolute;
-//   width: 150px;
-//   height: 280px;
-//   margin-bottom: 20px;
-//   z-index: 0;
-// //   transform: translateX(-10px);
-// }
-
-// .slider_slide_active {
-//   position: absolute;
-//   width: 550px;
-//   height: 350px;
-//   margin-bottom: 20px;
-//   z-index: 1;
-// //   left: 80px;
-//   transform: translateX(80px);
-// }
-
-// .slider_slide_next {
-//   position: absolute;
-//   //   left: 528px;
-//   transform: translateX(528px);
-//   width: 150px;
-//   height: 280px;
-//   margin-bottom: 20px;
-//   z-index: 2;
-// }
-
 .slider_slides {
   position: relative;
   display: flex;
   align-items: center;
+  width: 100%;
+  max-width: 800px;
+  height: 350px;
+  // border: 1px solid red;
 }
 
 .slider_slide_prev {
-  position: absolute;
-  width: 150px;
+  position: absolute; 
+  width: 100%;
+  max-width: 150px;
   height: 280px;
   margin-bottom: 20px;
   z-index: 0;
@@ -88,24 +41,51 @@
 }
 
 .slider_slide_active {
-  position: absolute;
-  width: 550px;
+  position: absolute; 
+  width: 100%;
+  max-width: 550px;
   height: 350px;
   margin-bottom: 20px;
   z-index: 1;
   transform: translateX(80px);
-  //   transition: transform 0.5s ease-in-out;
+    // transition: transform 0.5s ease-in-out;
 }
 
 .slider_slide_next {
   position: absolute;
-  width: 150px;
+  width: 100%;
+  max-width: 150px;
   height: 280px;
   margin-bottom: 20px;
   z-index: 2;
   transform: translateX(528px);
   transition: transform 0.5s ease-in-out;
-}
+} 
+
+@media screen and (max-width: 1280px) {
+  .slider_slide_active {
+    // width: 300px;
+  }  
+  // .slider_container {
+  //   display: flex;
+  //   flex-direction: column;
+  // } 
+
+  .slider_slide_next {
+    transform: translateX(288px);
+  }
+ 
+  .slider_slide_active {
+    max-width: 300px;
+  }
+
+  // .slider_slide_next {
+  //   transform: translateX(50px);
+  // }
+} 
+
+// newTranslate = oldTranslate * (newWidth / oldWidth)  
+// newTranslate = -200 * (300 / 550) ≈ -109
 
 // swiper part .....
 
