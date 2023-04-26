@@ -21,8 +21,8 @@ const HOME: FC = () => {
             {/* <CERTIFICATE /> */}
             {/* <REVIEW /> */}
             {/* <PARTNER /> */}
-            <STEP />
-            {/* <FOOTER /> */}
+            {/* <STEP /> */}
+            <FOOTER />
         </Fragment>
     )
 }

@@ -2,6 +2,7 @@
   width: 100%;
   max-width: 1440px;
   margin: 35px auto;
+  padding: 0 28px;
 }
 
 .footer_container {
@@ -54,4 +55,31 @@
 .footer_contact_socials {
     display: flex;
     gap: 20px;
+} 
+
+@media screen and (max-width: 768px) {
+  .footer_nav_link {
+    font-size: 14px;
+    font-family: montserrat-bold;
+  }  
+
+  .footer_contact_title {
+    font-size: 16px;
+  }
+
+  .footer_document {
+    font-size: 14px;
+  } 
+
+  .footer_contact_socials img {
+    width: 27px;
+    height: 27px;
+  }
+} 
+
+@media screen and (max-width: 660px) {
+  .footer_nav_links {
+    display: flex;
+    flex-direction: column;
+  }
 }
