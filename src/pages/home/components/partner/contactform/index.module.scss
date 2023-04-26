@@ -89,3 +89,13 @@
   padding: 8px 11px;
   border-radius: 10px;
 }
+
+@media screen and (max-width: 480px) {
+  .form_input::placeholder {
+    font-size: 16px;
+  }
+
+  .form_btn {
+    font-size: 16px;
+  }
+}

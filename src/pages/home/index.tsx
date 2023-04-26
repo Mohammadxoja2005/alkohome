@@ -18,11 +18,11 @@ const HOME: FC = () => {
             {/* <SLIDER /> */}
             {/* <ORDER />
             <PRODUCT /> */}
-            <CERTIFICATE />
-            {/* <REVIEW />
-            <PARTNER />
+            {/* <CERTIFICATE /> */}
+            {/* <REVIEW /> */}
+            {/* <PARTNER /> */}
             <STEP />
-            <FOOTER /> */}
+            {/* <FOOTER /> */}
         </Fragment>
     )
 }

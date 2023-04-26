@@ -1,6 +1,7 @@
 .partner {
   max-width: 1440px;
   margin: 50px auto;
+  padding: 0 28px;
 }
 
 .partner_container {
@@ -33,4 +34,44 @@
 .partner_contact_title_bold {
   font-family: montserrat-bold;
   font-weight: 700;
+}
+
+@media screen and (max-width: 992px) {
+  .partner_title {
+    font-size: 36px;
+  }
+
+  .partner_contact_title {
+    font-size: 24px;
+    text-align: center;
+    max-width: 800px;
+    margin-bottom: 20px;
+  }
+
+  .partner_contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .partner_title {
+    font-size: 24px;
+  }
+
+  .partner_contact_title {
+    font-size: 16px;
+    text-align: left;
+  } 
+
+  .partner_title {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .partner_title {
+    font-size: 20px;
+  }
 }
