@@ -2,6 +2,7 @@
   width: 100%;
   max-width: 1440px;
   margin: 50px auto;
+  padding: 0 28px;
 }
 
 .ser_container {
@@ -33,4 +34,34 @@
 
 .ser_img img {
   object-fit: cover;
+} 
+
+@media screen and (max-width: 768px) {
+  .ser_title {
+    font-size: 36px;
+  } 
+  
+  .ser_img {
+    width: 167px;
+    height: 241px;
+  }
+} 
+
+@media screen and (max-width: 480px) {
+  .ser_title {
+    font-size: 24px;
+  }  
+  
+  .ser_img:nth-child(1) {
+    display: none;
+  } 
+
+  .ser_img:nth-child(4) {
+    display: none;
+  }
+
+  .ser_img {
+    width: 95px;
+    height: 120px;
+  }
 }
