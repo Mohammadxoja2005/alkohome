@@ -99,6 +99,12 @@
   max-width: 1280px;
   margin: auto;
   gap: 20px;
+} 
+
+@media screen and (max-width: 1280px) {
+  .rev_title {
+    margin-bottom: 20px;
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -157,5 +163,12 @@
 
   .next_button {
     display: none;
+  }
+} 
+
+@media screen and (max-width: 360px) {
+  .rev_title {
+    font-size: 20px;
+    margin-bottom: 10px;
   }
 }

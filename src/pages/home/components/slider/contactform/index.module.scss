@@ -115,13 +115,16 @@
 
 @media screen and (max-width: 480px) {
   .form_title {
-    font-size: 20px;
+    font-size: 20px; 
+    margin-bottom: 10px;
   }
 }
 
 @media screen and (max-width: 360px) {
   .form_title {
     font-size: 20px;
+    font-family: montserrat-bold;
+    font-weight: 700;
   }
 
   .form_input::placeholder {

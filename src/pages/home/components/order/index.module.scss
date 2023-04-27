@@ -73,6 +73,10 @@
 
   .order_product_btn {
     width: 100%;
+  } 
+
+  .order_title {
+    margin-bottom: 20px;
   }
 }
 
@@ -99,7 +103,7 @@
     padding: 0;
   }
 
-}
+} 
 
 @media screen and (max-width: 480px) {
   .order_title {
@@ -112,5 +116,12 @@
 
   .order_product_btn {
     font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 360px) { 
+  .order_title {
+    font-size: 20px;
+    margin-bottom: 10px;
   }
 }
