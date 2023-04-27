@@ -7,6 +7,11 @@ import OZON from "../../../../assets/images/yandexmarket.png"
 import YANDEXMARKET from "../../../../assets/images/ozon.png"
 // layouts
 import VECTORBEER from "../../../../layouts/vectorbeer";
+// swiper
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Autoplay, Pagination, EffectCoverflow } from 'swiper';
+import "swiper/css";
+import "swiper/css/pagination";
 
 const ORDER: FC = () => {
 
@@ -37,7 +42,35 @@ const ORDER: FC = () => {
                 <div className={styles.order_container} >
                     <h2 className={styles.order_title}>Купить в розницу</h2>
 
-                    <div className={styles.order_list}>
+                    <Swiper
+                        slidesPerView={3}
+                        spaceBetween={20}
+                        breakpoints={{
+                            798: {
+                                slidesPerView: 3
+                            }, 
+                            480: {
+                                slidesPerView: 2.2
+                            },
+                            0: {
+                                slidesPerView: 1.2
+                            }
+                        }}
+                        className={styles.order_list}>
+                        {products && products.map((product) => {
+                            return (
+                                <SwiperSlide>
+                                    <div key={product.id} className={styles.order_product}>
+                                        <h3 className={styles.order_product_title}>{product.name}</h3>
+                                        <img className={styles.order_product_img} src={product.img} alt="" />
+                                        <div className={styles.order_product_btn}>Заказать</div>
+                                    </div>
+                                </SwiperSlide>
+                            )
+                        })}
+                    </Swiper>
+
+                    {/* <div className={styles.order_list}>
                         {products && products.map((product) => {
                             return (
                                 <div key={product.id} className={styles.order_product}>
@@ -47,7 +80,7 @@ const ORDER: FC = () => {
                                 </div>
                             )
                         })}
-                    </div>
+                    </div> */}
 
                 </div>
             </section>
