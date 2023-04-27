@@ -4,6 +4,7 @@ import styles from "./index.module.scss";
 import SLIDER1 from "../../../../assets/images/slider1.png";
 import SLIDER2 from "../../../../assets/images/slider2.png";
 import SLIDER3 from "../../../../assets/images/slider3.png";
+import SLIDERPATTERN from "../../../../assets/images/slider_prtrn.png"
 // components
 import CONTACTFORM from "./contactform";
 // swiper 
@@ -84,6 +85,7 @@ const SLIDER: FC = () => {
 
     return (
         <section className={styles.slider}>
+            <img src={SLIDERPATTERN} alt="pattern" className={styles.slider_pattern}/>
             <div className={styles.slider_container}>
                 <div className={styles.slider_slides}>
                     <div data-name="slide">
