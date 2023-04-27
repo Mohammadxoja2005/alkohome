@@ -15,12 +15,9 @@ const HOME: FC = () => {
     const [screenWidth, setScreenWidth] = useState<number>(window.innerWidth);
 
     window.addEventListener('resize', function () {
-        // get the current width of the screen
         setScreenWidth(window.innerWidth);
-
-        // console.log('Current width of screen:', width);
     });
-    console.log(screenWidth)
+
     return (
         <Fragment>
             <HEADER />
