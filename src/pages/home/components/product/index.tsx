@@ -84,7 +84,7 @@ const PRODUCT: FC = () => {
                         {name != '' && des != '' ? <div className={styles.product_modal}>
                             <div className={styles.product_modal_close_name_container}>
                                 <h3 className={styles.product_modal_title}>{name}</h3>
-                                <p className={styles.product_modal_close} onClick={() => onClose()}>X</p>
+                                <p className={styles.product_modal_close} style={{cursor: "pointer"}} onClick={() => onClose()}>X</p>
                             </div>
                             <p className={styles.product_modal_des}>{des}</p>
                         </div> : null
