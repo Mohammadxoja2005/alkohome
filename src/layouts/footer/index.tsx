@@ -26,7 +26,7 @@ const FOOTER: FC = () => {
                         <p className={styles.footer_document}>ИНН 7710912420 ОГРН 1127746354394 ООО «Деловой мир Москва»</p>
                     </div>
 
-                    <div className={styles.footer_contact} >
+                    <div className={styles.footer_contact}>
                         <p className={styles.footer_contact_title}>Свяжитесь с нами</p>
 
                         <div className={styles.footer_contact_socials}>
