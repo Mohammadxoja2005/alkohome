@@ -15,15 +15,17 @@ import "swiper/css/pagination";
 
 SwiperCore.use([Autoplay, Pagination, EffectCoverflow]);
 
-const arrOfSlides: any = [
+const arrOfSlides: Array<{ id: number, img: string }> = [
     {
+        id: 1,
         img: SLIDER2,
-        class: styles.slider_slide_prev
     },
     {
+        id: 2,
         img: SLIDER3
     },
     {
+        id: 3,
         img: SLIDER1
     },
 ]
@@ -88,22 +90,39 @@ const SLIDER: FC = () => {
             <img src={SLIDERPATTERN} alt="pattern" className={styles.slider_pattern} />
             <div className={styles.slider_container}>
                 <div className={styles.slider_slides}>
-                    <div data-name="slide">
-                        <img src={SLIDER2} alt="" className={styles.slider_slide_img} />
-                    </div>
-                    <div data-name="slide">
+                    {arrOfSlides.map((slide) => {
+                        return (
+                            <div key={slide.id} data-name="slide">
+                                <img src={slide.img} alt="" className={styles.slider_slide_img} />
+                            </div>
+                        )
+                    })
+
+                    }
+                    {/* <div data-name="slide">
                         <img src={SLIDER3} alt="" className={styles.slider_slide_img} />
                     </div>
                     <div data-name="slide">
                         <img src={SLIDER1} alt="" className={styles.slider_slide_img} />
-                    </div>
+                    </div> */}
                 </div>
 
                 <Swiper
                     slidesPerView={2.2}
                     spaceBetween={5}
                     className={styles.swiper_slide}>
-                    <SwiperSlide>
+                    {arrOfSlides.map((slide) => {
+                        return (
+                            <SwiperSlide>
+                                <div key={slide.id} className={styles.swiper_slide_div}>
+                                    <img src={slide.img} alt="" className={styles.swiper_slide_img} />
+                                </div>
+                            </SwiperSlide>
+                        )
+                    })
+
+                    }
+                    {/* <SwiperSlide>
                         <div className={styles.swiper_slide_div}>
                             <img src={SLIDER2} alt="" className={styles.swiper_slide_img} />
                         </div>
@@ -112,12 +131,7 @@ const SLIDER: FC = () => {
                         <div className={styles.swiper_slide_div}>
                             <img src={SLIDER2} alt="" className={styles.swiper_slide_img} />
                         </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className={styles.swiper_slide_div}>
-                            <img src={SLIDER2} alt="" className={styles.swiper_slide_img} />
-                        </div>
-                    </SwiperSlide>
+                    </SwiperSlide> */}
                 </Swiper>
 
                 <CONTACTFORM />
