@@ -85,7 +85,7 @@ const SLIDER: FC = () => {
 
     return (
         <section className={styles.slider}>
-            <img src={SLIDERPATTERN} alt="pattern" className={styles.slider_pattern}/>
+            <img src={SLIDERPATTERN} alt="pattern" className={styles.slider_pattern} />
             <div className={styles.slider_container}>
                 <div className={styles.slider_slides}>
                     <div data-name="slide">

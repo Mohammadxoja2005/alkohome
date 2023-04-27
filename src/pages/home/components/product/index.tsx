@@ -1,4 +1,4 @@
-import React, { Fragment, FC } from 'react'
+import React, { Fragment, FC, useState } from 'react'
 // styles
 import styles from "./index.module.scss";
 // images
@@ -47,6 +47,19 @@ const PRODUCT: FC = () => {
         },
     ]
 
+    const [name, setName] = useState<string>('');
+    const [des, setDes] = useState<string>('');
+
+    const submitInfo = (name: string, description: string): void => {
+        setName(name)
+        setDes(description)
+    }
+
+    const onClose = (): void => {
+        setName('')
+        setDes('')
+    }
+
     return (
         <Fragment>
             <section className={styles.product}>
@@ -62,12 +75,21 @@ const PRODUCT: FC = () => {
                                     <p className={styles.product_single_des}>
                                         {product.description}
                                     </p>
-                                    <div className={styles.product_single_detail_btn} >
+                                    <div className={styles.product_single_detail_btn} onClick={() => submitInfo(product.name, product.description)}>
                                         Подробнее
                                     </div>
                                 </div>
                             )
                         })}
+                        {name != '' && des != '' ? <div className={styles.product_modal}>
+                            <div className={styles.product_modal_close_name_container}>
+                                <h3 className={styles.product_modal_title}>{name}</h3>
+                                <p className={styles.product_modal_close} onClick={() => onClose()}>X</p>
+                            </div>
+                            <p className={styles.product_modal_des}>{des}</p>
+                        </div> : null
+
+                        }
                     </div>
                 </div>
             </section>
