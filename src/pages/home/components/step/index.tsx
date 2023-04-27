@@ -4,7 +4,6 @@ import styles from "./index.module.scss";
 // icons
 import ARROW from "../../../../assets/icons/arrow.png";
 // layouts
-import FIRSTRAWIMG from '../../../../layouts/firstrawimg';
 
 const STEP: FC = () => {
     return (
@@ -55,7 +54,6 @@ const STEP: FC = () => {
                     </div>
                 </div>
             </section>
-            <FIRSTRAWIMG />
         </Fragment>
     )
 }

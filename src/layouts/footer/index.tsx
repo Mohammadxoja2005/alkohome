@@ -7,11 +7,13 @@ import SMS from "../../assets/icons/bgsms.png";
 import VK from "../../assets/icons/bgvk.png";
 import TELEGRAM from "../../assets/icons/bgtelegram.png";
 // layouts
+import FIRSTRAWIMG from '../../layouts/firstrawimg';
 import SECONDRAWIMG from '../seconrawimg';
 
 const FOOTER: FC = () => {
     return (
-        <Fragment>
+        <Fragment> 
+            <FIRSTRAWIMG />
             <section className={styles.footer}>
                 <div className={styles.footer_container}>
 

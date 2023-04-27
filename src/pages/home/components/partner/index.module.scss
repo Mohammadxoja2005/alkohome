@@ -75,9 +75,20 @@
   .partner_title {
     margin-bottom: 20px;
   }
+} 
+
+@media screen and (max-width: 480px) {
+  .partner {
+    margin-top: 0;
+  }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 360px) { 
+
+  .partner {
+    margin: 0 auto 20px auto;
+  }
+
   .partner_title {
     font-size: 20px;
   }
