@@ -74,7 +74,7 @@ header {
   display: block;
 }
 
-@media screen and (max-width: 1281px) {
+@media screen and (min-width: 1281px) {
   .pattern {
     width: 100%;
     margin-bottom: 20px;

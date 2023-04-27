@@ -1,4 +1,4 @@
-import React, { Fragment, FC } from 'react';
+import React, { Fragment, FC, useState } from 'react';
 // layouts
 import HEADER from '../../layouts/header';
 // components
@@ -12,6 +12,15 @@ import STEP from './components/step';
 import FOOTER from '../../layouts/footer';
 
 const HOME: FC = () => {
+    const [screenWidth, setScreenWidth] = useState<number>(window.innerWidth);
+
+    window.addEventListener('resize', function () {
+        // get the current width of the screen
+        setScreenWidth(window.innerWidth);
+
+        // console.log('Current width of screen:', width);
+    });
+    console.log(screenWidth)
     return (
         <Fragment>
             <HEADER />
@@ -20,8 +29,18 @@ const HOME: FC = () => {
             <PRODUCT />
             <CERTIFICATE />
             <REVIEW />
-            <PARTNER />
-            <STEP />
+            {screenWidth <= 480 ?
+                <>
+                    <STEP />
+                    <PARTNER />
+                </> :
+                <>
+                    <PARTNER />
+                    <STEP />
+                </>
+
+            }
+
             <FOOTER />
         </Fragment>
     )
