@@ -9,7 +9,9 @@ import SMS from "../../assets/icons/sms.png";
 import PHONE from "../../assets/icons/phone.png";
 import VK from "../../assets/icons/vk.png";
 import RAW1 from "../../assets/images/raw5.png";
+import RAW6 from "../../assets/images/raw6.png";
 import FLOWER from "../../assets/icons/flower.png";
+import VECTORBEER from '../vectorbeer';
 
 const HEADER: FC = () => {
     return (
@@ -58,8 +60,11 @@ const HEADER: FC = () => {
                 </div>
             </header>
 
+            {/* <VECTORBEER /> */}
+
             <section className={styles.pattern}>
                 <img src={RAW1} alt="pattern" className={styles.pattern_img} />
+                <img src={RAW6} alt="pattern" className={styles.pattern_img_addition} />
             </section>
         </Fragment>
     )

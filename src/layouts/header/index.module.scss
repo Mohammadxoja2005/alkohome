@@ -66,14 +66,36 @@ header {
   cursor: pointer;
 }
 
-.pattern {
-  width: 100%;
-  margin-bottom: 20px;
+.pattern_img_addition {
+  display: none;
 }
 
 .pattern_img {
-  width: 100%;
-  object-fit: cover;
+  display: block;
+}
+
+@media screen and (max-width: 1281px) {
+  .pattern {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .pattern_img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .pattern {
+    width: 100%;
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+
+  .pattern_img {
+    object-fit: cover;
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -123,5 +145,15 @@ header {
     width: 100%;
     height: 1px;
     background-color: white;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .pattern_img_addition {
+    display: block;
+  }
+
+  .pattern_img {
+    display: none;
   }
 }
