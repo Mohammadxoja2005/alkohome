@@ -9,7 +9,6 @@ import CONTACTFORM from "./contactform";
 // swiper 
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay, Pagination, EffectCoverflow } from 'swiper';
-
 import "swiper/css";
 import "swiper/css/pagination";
 
@@ -33,6 +32,10 @@ const SLIDER: FC = () => {
     useEffect(() => {
 
         const slides = document.querySelectorAll('[data-name="slide"]');
+
+        if (slides == undefined) {
+            return;
+        }
 
         const arr = [0, 1, 2];
 
@@ -83,7 +86,6 @@ const SLIDER: FC = () => {
         <section className={styles.slider}>
             <div className={styles.slider_container}>
                 <div className={styles.slider_slides}>
-
                     <div data-name="slide">
                         <img src={SLIDER2} alt="" className={styles.slider_slide_img} />
                     </div>
@@ -94,6 +96,27 @@ const SLIDER: FC = () => {
                         <img src={SLIDER1} alt="" className={styles.slider_slide_img} />
                     </div>
                 </div>
+
+                <Swiper
+                    slidesPerView={2.2}
+                    spaceBetween={5}
+                    className={styles.swiper_slide}>
+                    <SwiperSlide>
+                        <div className={styles.swiper_slide_div}>
+                            <img src={SLIDER2} alt="" className={styles.swiper_slide_img} />
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className={styles.swiper_slide_div}>
+                            <img src={SLIDER2} alt="" className={styles.swiper_slide_img} />
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className={styles.swiper_slide_div}>
+                            <img src={SLIDER2} alt="" className={styles.swiper_slide_img} />
+                        </div>
+                    </SwiperSlide>
+                </Swiper>
 
                 <CONTACTFORM />
             </div>
