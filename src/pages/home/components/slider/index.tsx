@@ -1,9 +1,9 @@
 import React, { FC, useEffect } from "react";
 import styles from "./index.module.scss";
 // images
-import SLIDER1 from "../../../../assets/images/slider1.png";
-import SLIDER2 from "../../../../assets/images/slider2.png";
-import SLIDER3 from "../../../../assets/images/slider3.png";
+import SLIDER1 from "../../../../assets/images/slider_1.png";
+import SLIDER2 from "../../../../assets/images/slider_2.png";
+import SLIDER3 from "../../../../assets/images/slider_3.png";
 import SLIDERPATTERN from "../../../../assets/images/slider_prtrn.png"
 // components
 import CONTACTFORM from "./contactform";
