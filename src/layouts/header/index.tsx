@@ -1,4 +1,4 @@
-import React, { Fragment, FC } from 'react'
+import React, { Fragment, FC, useState } from 'react'
 // styles
 import styles from "./index.module.scss";
 // icons
@@ -14,6 +14,7 @@ import FLOWER from "../../assets/icons/flower.png";
 import VECTORBEER from '../vectorbeer';
 
 const HEADER: FC = () => {
+    const [isOpen, setIsOpen] = useState<boolean>(false);
     return (
         <Fragment>
             <header className={styles.header_large_screen}>
@@ -52,14 +53,33 @@ const HEADER: FC = () => {
                         <img src={LOGO} alt="alkohome" title='alkohome-logo' />
                         <img src={LOGONAME} alt="alkohome" title='alkhome-name' />
                     </a>
-                    <div className={styles.header_small_screen_trigger}>
+                    <div className={styles.header_small_screen_trigger} onClick={() => setIsOpen(!isOpen)}>
                         <div className={styles.header_small_screen_line_f}></div>
-                        <img src={FLOWER} alt="" />
+                        <img src={FLOWER} alt="flower" />
                         <div className={styles.header_small_screen_line_s}></div>
                     </div>
                 </div>
-            </header>
 
+            </header>
+            {isOpen ? <div className={styles.header_small_navbar}>
+                <ul className={styles.header_menu_mobile}>
+                    <li className={styles.header_menu_title}><a href="#" className={styles.header_menu_href} >Главная</a></li>
+                    <li className={styles.header_menu_title}><a href="#" className={styles.header_menu_href} >Каталог</a></li>
+                    <li className={styles.header_menu_title}><a href="#" className={styles.header_menu_href} >Отзывы</a></li>
+                    <li className={styles.header_menu_title}><a href="#" className={styles.header_menu_href} >Контакты</a></li>
+                    <li className={styles.header_menu_title}><a href="#" className={styles.header_menu_href} >Купить</a></li>
+                </ul>
+
+                <div className={styles.header_contact}>
+                    <h3 className={styles.header_contact_name}>Свяжитесь с нами</h3>
+                    <div className={styles.header_contact_socials}>
+                        <img src={PHONE} alt="phone" title='call us' className={styles.header_social} />
+                        <img src={SMS} alt="email" title='email us' className={styles.header_social} />
+                        <img src={VK} alt="vk" title='we are on vk' className={styles.header_social} />
+                        <img src={TELEGRAM} alt="telegram" title='we on telegram' className={styles.header_social} />
+                    </div>
+                </div>
+            </div> : null}
             {/* <VECTORBEER /> */}
 
             <section className={styles.pattern}>
