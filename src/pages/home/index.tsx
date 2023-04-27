@@ -14,15 +14,15 @@ import FOOTER from '../../layouts/footer';
 const HOME: FC = () => {
     return (
         <Fragment>
-            {/* <HEADER /> */}
+            <HEADER />
             <SLIDER />
-            {/* <ORDER />
-            <PRODUCT /> */}
-            {/* <CERTIFICATE /> */}
-            {/* <REVIEW />
+            <ORDER />
+            <PRODUCT />
+            <CERTIFICATE />
+            <REVIEW />
             <PARTNER />
             <STEP />
-            <FOOTER /> */}
+            <FOOTER />
         </Fragment>
     )
 }
