@@ -1,4 +1,4 @@
-import React, { Fragment, FC, useState } from 'react'
+import React, { Fragment, FC, useState, useEffect, useRef } from 'react';
 // styles
 import styles from "./index.module.scss";
 // images
@@ -9,7 +9,6 @@ import VECTORBEER from '../../../../layouts/vectorbeer';
 import CLOSE from "../../../../assets/icons/close.svg";
 
 const PRODUCT: FC = () => {
-
     const data: Array<{ id: number, name: string, description: string, img: string }> = [
         {
             id: 1,
@@ -62,6 +61,24 @@ const PRODUCT: FC = () => {
         setDes('')
     }
 
+    const productModal = useRef<HTMLDivElement>(null);
+    const productModalContainer = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+
+        if (productModal.current === undefined) {
+            return;
+        }
+
+        productModalContainer.current?.addEventListener('click', (e: any) => {
+            if (!productModal.current?.contains(e.target)) {
+                setName('')
+                setDes('')
+            }
+        })
+
+    }, [name])
+
     return (
         <Fragment>
             <section className={styles.product}>
@@ -83,14 +100,20 @@ const PRODUCT: FC = () => {
                                 </div>
                             )
                         })}
-                        {name != '' && des != '' ? <div className={styles.product_modal}>
-                            <div className={styles.product_modal_close_name_container}>
-                                <div></div>
-                                <h3 className={styles.product_modal_title}>{name}</h3>
-                                <img className={styles.product_modal_close} onClick={() => onClose()} style={{ cursor: "pointer" }} src={CLOSE} alt="close modal" />
+                        {name != '' && des != '' ?
+
+                            <div ref={productModalContainer} className={styles.product_modal_container}>
+                                <div ref={productModal} className={styles.product_modal} data-modal="product_modal">
+                                    <div className={styles.product_modal_close_name_container}>
+                                        <div></div>
+                                        <h3 className={styles.product_modal_title}>{name}</h3>
+                                        <img className={styles.product_modal_close} onClick={() => onClose()} style={{ cursor: "pointer" }} src={CLOSE} alt="close modal" />
+                                    </div>
+                                    <p className={styles.product_modal_des}>{des}</p>
+                                </div>
                             </div>
-                            <p className={styles.product_modal_des}>{des}</p>
-                        </div> : null}
+
+                            : null}
                     </div>
                 </div>
             </section>
