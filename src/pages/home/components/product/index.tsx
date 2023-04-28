@@ -109,7 +109,6 @@ const PRODUCT: FC = () => {
                             )
                         })}
                         {name != '' && des != '' ?
-
                             <div ref={productModalContainer} className={styles.product_modal_container}>
                                 <div ref={productModal} className={styles.product_modal} data-modal="product_modal">
                                     <div className={styles.product_modal_close_name_container}>
@@ -119,9 +118,7 @@ const PRODUCT: FC = () => {
                                     </div>
                                     <p className={styles.product_modal_des}>{des}</p>
                                 </div>
-                            </div>
-
-                            : null}
+                            </div> : null}
                     </div>
                 </div>
             </section>
