@@ -15,10 +15,10 @@ const CERTIFICATE: FC = () => {
                 <h2 className={styles.ser_title}>Наш продукт сертифицирован</h2>
 
                 <div className={styles.ser_img_container} >
-                    <div className={styles.ser_img}><img src={SERTIFCATE1} alt="" /></div>
-                    <div className={styles.ser_img}><img src={SERTIFCATE2} alt="" /></div>
-                    <div className={styles.ser_img}><img src={SERTIFCATE3} alt="" /></div>
-                    <div className={styles.ser_img}><img src={SERTIFCATE4} alt="" /></div>
+                    <div className={styles.ser_img}><img src={SERTIFCATE1} alt="alco sertificate" /></div>
+                    <div className={styles.ser_img}><img src={SERTIFCATE2} alt="alco sertificate" /></div>
+                    <div className={styles.ser_img}><img src={SERTIFCATE3} alt="alco sertificate" /></div>
+                    <div className={styles.ser_img}><img src={SERTIFCATE4} alt="alco sertificate" /></div>
                 </div>
             </div>
         </section>

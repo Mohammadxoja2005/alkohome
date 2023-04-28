@@ -139,7 +139,7 @@
     flex-direction: column;
     position: fixed;
     width: 100%;
-    max-width: 426px;
+    max-width: 320px;
     height: 214px;
     background-color: #EBEBEB;
     top: 50%;
@@ -160,6 +160,7 @@
     font-weight: 700;
     font-family: montserrat-bold;
     margin-bottom: 10px;
+    text-align: center;
   } 
 
   .product_modal_des {

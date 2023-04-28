@@ -5,6 +5,8 @@ import styles from "./index.module.scss";
 import PRODUCTLIST from "../../../../assets/images/product.png";
 // layouts 
 import VECTORBEER from '../../../../layouts/vectorbeer';
+// icons
+import CLOSE from "../../../../assets/icons/close.svg";
 
 const PRODUCT: FC = () => {
 
@@ -83,13 +85,12 @@ const PRODUCT: FC = () => {
                         })}
                         {name != '' && des != '' ? <div className={styles.product_modal}>
                             <div className={styles.product_modal_close_name_container}>
+                                <div></div>
                                 <h3 className={styles.product_modal_title}>{name}</h3>
-                                <p className={styles.product_modal_close} style={{cursor: "pointer"}} onClick={() => onClose()}>X</p>
+                                <img className={styles.product_modal_close} onClick={() => onClose()} style={{ cursor: "pointer" }} src={CLOSE} alt="close modal" />
                             </div>
                             <p className={styles.product_modal_des}>{des}</p>
-                        </div> : null
-
-                        }
+                        </div> : null}
                     </div>
                 </div>
             </section>
