@@ -134,8 +134,8 @@
     cursor: pointer;
   }
 
-  .product_modal_container { 
-    position: fixed; 
+  .product_modal_container {
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -158,6 +158,7 @@
     transform: translate(-50%, -50%);
     padding: 10px 20px;
     border-radius: 10px;
+    overflow: auto;
   }
 
   .product_modal_close_name_container {
@@ -183,7 +184,7 @@
 
 @media screen and (max-width: 480px) {
   .product_single {
-    margin-top: 60px;
+    margin-top: 80px;
   }
 
   .product_single_img {

@@ -3,6 +3,9 @@ import React, { Fragment, FC, useState, useEffect, useRef } from 'react';
 import styles from "./index.module.scss";
 // images
 import PRODUCTLIST from "../../../../assets/images/product.png";
+import ZERNS from "../../../../assets/images/zerns.png"
+import FRUITS from "../../../../assets/images/fruits.png"
+import SPIRTS from "../../../../assets/images/spirts.png"
 // layouts 
 import VECTORBEER from '../../../../layouts/vectorbeer';
 // icons
@@ -13,20 +16,20 @@ const PRODUCT: FC = () => {
         {
             id: 1,
             name: 'Зерновые',
-            description: 'Дрожжи для самогона, для сахарных браг, спиртовые, мощные спиртоустойчивые дрожжи.Славятся',
-            img: PRODUCTLIST
+            description: 'Незаменимы для получения ароматных напитков: виски, коньяк, портвейн, херес, кальвадос, бренди, чача и др. Штамм отличается от других прежде всего способностью сохранять аромат исходного сырья. Готовить напитки на них',
+            img: ZERNS
         },
         {
             id: 2,
-            name: 'Зерновые',
-            description: 'Дрожжи для самогона, для сахарных браг, спиртовые, мощные спиртоустойчивые дрожжи.Славятся',
-            img: PRODUCTLIST
+            name: 'Фруктовые экстра',
+            description: 'незаменимы для получения ароматных напитков: виски, коньяк, портвейн, херес, кальвадос, бренди, чача и др. Штамм отличается от других прежде всего способностью сохранять аромат исходного сырья. Готовить напитки на них — просто сказка.',
+            img: FRUITS
         },
         {
             id: 3,
-            name: 'Зерновые',
-            description: 'Дрожжи для самогона, для сахарных браг, спиртовые, мощные спиртоустойчивые дрожжи.Славятся',
-            img: PRODUCTLIST
+            name: 'Спиртовые',
+            description: 'Активные сухие дрожжи ALKOHOME изготовлены из специально отобранного высококачественного штамма спиртовых дрожжей и специальной смеси из минералов, витаминов и питательных веществ. Спиртовые дрожжи ALKOHOME применяются для сбраживания сахарных браг, глюкозы, фруктозы и других моно и полисахаридов.',
+            img: SPIRTS
         },
         {
             id: 4,
@@ -36,8 +39,8 @@ const PRODUCT: FC = () => {
         },
         {
             id: 5,
-            name: 'Зерновые',
-            description: 'Дрожжи для самогона, для сахарных браг, спиртовые, мощные спиртоустойчивые дрожжи.Славятся',
+            name: 'Турбо Зерновые',
+            description: 'Дрожжи для зерновых браг позволяют легко и просто  получить зерновые напитки дома - из солодовых концентратов и осахаренных зерновых (пшеница, рис, кукуруза, гречиха и другой крупы)',
             img: PRODUCTLIST
         },
         {
@@ -100,7 +103,7 @@ const PRODUCT: FC = () => {
                                     <img className={styles.product_single_img} src={product.img} alt="" />
                                     <h3 className={styles.product_single_name}>{product.name}</h3>
                                     <p className={styles.product_single_des}>
-                                        {product.description}
+                                        {product.description.slice(0, 90)}...
                                     </p>
                                     <div className={styles.product_single_detail_btn} onClick={() => submitInfo(product.name, product.description)}>
                                         Подробнее
