@@ -70,6 +70,14 @@ const PRODUCT: FC = () => {
             return;
         }
 
+        const body = document.querySelector('body');
+
+        if (name.length > 0 && des.length > 0) {
+            body?.classList.add('stopScroll');
+        } else {
+            body?.classList.remove('stopScroll');
+        }
+
         productModalContainer.current?.addEventListener('click', (e: any) => {
             if (!productModal.current?.contains(e.target)) {
                 setName('')

@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+.stopScroll {
+  height: 100%;
+  overflow: hidden;
+}
+
 @font-face {
   font-family: montserrat-regular;
   src: url("./assets/fonts/Montserrat-Regular.ttf");
