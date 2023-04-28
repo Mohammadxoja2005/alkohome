@@ -38,7 +38,7 @@ const ORDER: FC = () => {
 
     return (
         <Fragment>
-            <section className={styles.order}>
+            <section className={styles.order} id="buy">
                 <div className={styles.order_container}>
                     <h2 className={styles.order_title}>Купить в розницу</h2>
 

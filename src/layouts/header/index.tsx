@@ -12,6 +12,9 @@ import RAW1 from "../../assets/images/raw5.png";
 import RAW6 from "../../assets/images/raw6.png";
 import FLOWER from "../../assets/icons/flower.png";
 import VECTORBEER from '../vectorbeer';
+// anchor-link 
+import AnchorLink from 'react-anchor-link-smooth-scroll'
+
 
 const HEADER: FC = () => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -27,11 +30,11 @@ const HEADER: FC = () => {
                         </a>
 
                         <ul className={styles.header_menu}>
-                            <li className={styles.header_menu_title}><a href="#" className={styles.header_menu_href} >Главная</a></li>
-                            <li className={styles.header_menu_title}><a href="#" className={styles.header_menu_href} >Каталог</a></li>
-                            <li className={styles.header_menu_title}><a href="#" className={styles.header_menu_href} >Отзывы</a></li>
-                            <li className={styles.header_menu_title}><a href="#" className={styles.header_menu_href} >Контакты</a></li>
-                            <li className={styles.header_menu_title}><a href="#" className={styles.header_menu_href} >Купить</a></li>
+                            <li className={styles.header_menu_title}><AnchorLink href="#main" className={styles.header_menu_href} >Главная</AnchorLink></li>
+                            <li className={styles.header_menu_title}><AnchorLink href="#catalog" className={styles.header_menu_href} >Каталог</AnchorLink></li>
+                            <li className={styles.header_menu_title}><AnchorLink href="#review" className={styles.header_menu_href} >Отзывы</AnchorLink></li>
+                            <li className={styles.header_menu_title}><AnchorLink href="#contact" className={styles.header_menu_href} >Контакты</AnchorLink></li>
+                            <li className={styles.header_menu_title}><AnchorLink href="#buy" className={styles.header_menu_href} >Купить</AnchorLink></li>
                         </ul>
 
                         <div className={styles.header_contact}>
@@ -63,11 +66,11 @@ const HEADER: FC = () => {
             </header>
             {isOpen ? <div className={styles.header_small_navbar}>
                 <ul className={styles.header_menu_mobile}>
-                    <li className={styles.header_menu_title}><a href="#" className={styles.header_menu_href} >Главная</a></li>
-                    <li className={styles.header_menu_title}><a href="#" className={styles.header_menu_href} >Каталог</a></li>
-                    <li className={styles.header_menu_title}><a href="#" className={styles.header_menu_href} >Отзывы</a></li>
-                    <li className={styles.header_menu_title}><a href="#" className={styles.header_menu_href} >Контакты</a></li>
-                    <li className={styles.header_menu_title}><a href="#" className={styles.header_menu_href} >Купить</a></li>
+                <li className={styles.header_menu_title}><AnchorLink href="#main" className={styles.header_menu_href} >Главная</AnchorLink></li>
+                            <li className={styles.header_menu_title}><AnchorLink href="#catalog" className={styles.header_menu_href} >Каталог</AnchorLink></li>
+                            <li className={styles.header_menu_title}><AnchorLink href="#review" className={styles.header_menu_href} >Отзывы</AnchorLink></li>
+                            <li className={styles.header_menu_title}><AnchorLink href="#contact" className={styles.header_menu_href} >Контакты</AnchorLink></li>
+                            <li className={styles.header_menu_title}><AnchorLink href="#buy" className={styles.header_menu_href} >Купить</AnchorLink></li>
                 </ul>
 
                 <div className={styles.header_contact}>

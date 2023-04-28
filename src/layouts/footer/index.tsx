@@ -14,7 +14,7 @@ const FOOTER: FC = () => {
     return (
         <Fragment> 
             <FIRSTRAWIMG />
-            <section className={styles.footer}>
+            <section className={styles.footer} id='contact'>
                 <div className={styles.footer_container}>
 
                     <div className={styles.footer_navigation}>

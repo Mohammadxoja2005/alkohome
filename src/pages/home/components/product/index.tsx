@@ -92,7 +92,7 @@ const PRODUCT: FC = () => {
 
     return (
         <Fragment>
-            <section className={styles.product}>
+            <section className={styles.product} id='catalog'>
                 <div className={styles.product_container}>
                     <h2 className={styles.product_title}>О нашем продукте</h2>
 

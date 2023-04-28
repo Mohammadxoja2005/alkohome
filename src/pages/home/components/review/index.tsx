@@ -17,7 +17,7 @@ SwiperCore.use([Autoplay, Navigation]);
 const REVIEW: FC = () => {
     return (
         <Fragment>
-            <section className={styles.rev}>
+            <section className={styles.rev} id='review'>
                 <div className={styles.rev_container}>
                     <h2 className={styles.rev_title}>Наши клиенты говорят о нас</h2>
                     <div className={styles.rev_container_aligns}>
