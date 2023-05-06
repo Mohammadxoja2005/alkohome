@@ -1,4 +1,6 @@
 import React, { Fragment, FC, useState } from 'react';
+import { Helmet } from "react-helmet-async";
+
 // layouts
 import HEADER from '../../layouts/header';
 // components
@@ -20,6 +22,11 @@ const HOME: FC = () => {
 
     return (
         <Fragment>
+            <Helmet>
+                <title>Alkohome</title>
+                <meta name="Основная страница" content="Добро пожаловать на наш сайт Alkohome - ваш идеальный источник всего, что связано с алкоголем. Откройте для себя огромное разнообразие спиртных напитков, полезных советов и вдохновения для того, чтобы исследовать и расширить свои знания о мире алкоголя. Мы предлагаем экспертную информацию, форумы для общения с сообществом, и все, что необходимо, чтобы ваш путь в алкогольном мире стал настоящим удовольствием. Присоединяйтесь к нам сегодня и начните свое путешествие!" />
+                <link rel="canonical" href="/" />
+            </Helmet>
             <HEADER />
             <SLIDER />
             <ORDER />
