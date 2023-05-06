@@ -20,8 +20,8 @@
 }
 
 .ser_img_container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: flex;
+  // grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 50px;
   max-width: 1165px;
   margin: auto;
@@ -30,12 +30,25 @@
 .ser_img {
   max-width: 245px;
   height: 322px;
+  border: 2px solid black;
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
 }
 
-.ser_img img {
+.ser_img_img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 20px;
+}
+
+.ser_img_open {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  // transform: translate(-50%, -50%);
 }
 
 .ser_modal {

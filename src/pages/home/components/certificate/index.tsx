@@ -2,12 +2,11 @@ import React, { FC, useState, useEffect, useRef } from 'react'
 // styles
 import styles from "./index.module.scss";
 // images
-import SERTIFCATE1 from "../.././../../assets/images/certificate1.png";
-import SERTIFCATE2 from "../.././../../assets/images/certificate2.png";
 import SERTIFCATE3 from "../.././../../assets/images/certificate3.png";
 import SERTIFCATE4 from "../.././../../assets/images/certificate4.png";
 // icons
 import CLOSE from '../../../../assets/icons/close.svg';
+import SEARCH from "../../../../assets/icons/search.svg";
 
 const CERTIFICATE: FC = () => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -37,10 +36,16 @@ const CERTIFICATE: FC = () => {
                 <h2 className={styles.ser_title}>Наш продукт сертифицирован</h2>
 
                 <div className={styles.ser_img_container} >
-                    <div onClick={() => setIsOpen(true)} className={styles.ser_img}><img onClick={(e: any) => setImgPath(e.target.src)} src={SERTIFCATE1} alt="alco sertificate" /></div>
-                    <div onClick={() => setIsOpen(true)} className={styles.ser_img}><img onClick={(e: any) => setImgPath(e.target.src)} src={SERTIFCATE2} alt="alco sertificate" /></div>
-                    <div onClick={() => setIsOpen(true)} className={styles.ser_img}><img onClick={(e: any) => setImgPath(e.target.src)} src={SERTIFCATE3} alt="alco sertificate" /></div>
-                    <div onClick={() => setIsOpen(true)} className={styles.ser_img}><img onClick={(e: any) => setImgPath(e.target.src)} src={SERTIFCATE4} alt="alco sertificate" /></div>
+                    <div onClick={() => setIsOpen(true)} className={styles.ser_img}>
+                        <img className={styles.ser_img_open} src={SEARCH} alt="open" />
+                        <img className={styles.ser_img_img} onClick={(e: any) => setImgPath(e.target.src)} src={SERTIFCATE3} alt="alco sertificate" />
+                    </div>
+                    <div onClick={() => setIsOpen(true)} className={styles.ser_img}>
+                        <img className={styles.ser_img_open} src={SEARCH} alt="open" />
+                        <img className={styles.ser_img_img} onClick={(e: any) => setImgPath(e.target.src)} src={SERTIFCATE4} alt="alco sertificate" />
+                    </div>
+                    {/* <div onClick={() => setIsOpen(true)} className={styles.ser_img}><img onClick={(e: any) => setImgPath(e.target.src)} src={SERTIFCATE3} alt="alco sertificate" /></div>
+                    <div onClick={() => setIsOpen(true)} className={styles.ser_img}><img onClick={(e: any) => setImgPath(e.target.src)} src={SERTIFCATE4} alt="alco sertificate" /></div> */}
                 </div>
             </div>
 
