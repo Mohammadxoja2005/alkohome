@@ -3,6 +3,8 @@ import React, { FC } from 'react'
 import styles from "./index.module.scss";
 import NEXTARROW from '../../../../../assets/icons/arrownext.png';
 
+
+
 const CONTACTFORM: FC = () => {
     return (
         <form action="https://formsubmit.co/info@alkohome.com" method="POST" className={styles.form}>
