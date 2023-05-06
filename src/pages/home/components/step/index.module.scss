@@ -55,6 +55,12 @@
   font-family: inter-semibold;
   background-color: black;
   margin-bottom: 10px;
+  background-size: 150px 150px; 
+}
+
+.step_detail_img {
+  width: 150px;
+  height: 150px;
 }
 
 .step_detail_info_title {
@@ -78,27 +84,25 @@
 @media screen and (max-width: 792px) {
   .step_detail_info_container img {
     display: none;
-  } 
+  }
 
   // .step_detail {
   //   display: grid;
   //   grid-template-columns: 1fr 1fr;
   // }
-} 
-
+}
 
 @media screen and (max-width: 768px) {
   .step_title {
     font-size: 36px;
   }
-} 
+}
 
 @media screen and (max-width: 531px) {
-
   .step_detail {
     display: grid;
     grid-template-columns: 1fr 1fr;
-  } 
+  }
 
   .step_detail_info_container {
     margin-bottom: 34px;
