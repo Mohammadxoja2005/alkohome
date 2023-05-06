@@ -66,11 +66,11 @@ const HEADER: FC = () => {
             </header>
             {isOpen ? <div className={styles.header_small_navbar}>
                 <ul className={styles.header_menu_mobile}>
-                <li className={styles.header_menu_title}><AnchorLink href="#main" className={styles.header_menu_href} >Главная</AnchorLink></li>
-                            <li className={styles.header_menu_title}><AnchorLink href="#catalog" className={styles.header_menu_href} >Каталог</AnchorLink></li>
-                            <li className={styles.header_menu_title}><AnchorLink href="#review" className={styles.header_menu_href} >Отзывы</AnchorLink></li>
-                            <li className={styles.header_menu_title}><AnchorLink href="#contact" className={styles.header_menu_href} >Контакты</AnchorLink></li>
-                            <li className={styles.header_menu_title}><AnchorLink href="#buy" className={styles.header_menu_href} >Купить</AnchorLink></li>
+                    <li className={styles.header_menu_title}><AnchorLink href="#main" className={styles.header_menu_href} >Главная</AnchorLink></li>
+                    <li className={styles.header_menu_title}><AnchorLink href="#catalog" className={styles.header_menu_href} >Каталог</AnchorLink></li>
+                    <li className={styles.header_menu_title}><AnchorLink href="#review" className={styles.header_menu_href} >Отзывы</AnchorLink></li>
+                    <li className={styles.header_menu_title}><AnchorLink href="#contact" className={styles.header_menu_href} >Контакты</AnchorLink></li>
+                    <li className={styles.header_menu_title}><AnchorLink href="#buy" className={styles.header_menu_href} >Купить</AnchorLink></li>
                 </ul>
 
                 <div className={styles.header_contact}>
