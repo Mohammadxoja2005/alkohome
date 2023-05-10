@@ -22,6 +22,11 @@ const STEP: FC = () => {
                                 <div className={styles.step_detail_info_name} style={{ backgroundImage: `url("${STEP1}")` }}>
                                     Шаг 1
                                 </div>
+
+                                {/* <div className={styles.step_detail_info_text}>
+                                    Шаг 1
+                                </div> */}
+
                                 <p className={styles.step_detail_info_title}>Заказ</p>
                             </div>
                             <img src={ARROW} alt="" />
@@ -32,6 +37,10 @@ const STEP: FC = () => {
                                 <div className={styles.step_detail_info_name} style={{ backgroundImage: `url("${STEP2}")` }}>
                                     Шаг 2
                                 </div>
+
+                                {/* <div className={styles.step_detail_info_text}>
+                                    Шаг 2
+                                </div> */}
                                 <p className={styles.step_detail_info_title}>Вам выставляется счет</p>
                             </div>
                             <img src={ARROW} alt="" />
@@ -42,6 +51,10 @@ const STEP: FC = () => {
                                 <div className={styles.step_detail_info_name} style={{ backgroundImage: `url("${STEP3}")` }}>
                                     Шаг 3
                                 </div>
+
+                                {/* <div className={styles.step_detail_info_text}>
+                                    Шаг 3
+                                </div> */}
                                 <p className={styles.step_detail_info_title}>Оплата заказа</p>
                             </div>
                             <img src={ARROW} alt="" />
@@ -52,6 +65,10 @@ const STEP: FC = () => {
                                 <div className={styles.step_detail_info_name} style={{ backgroundImage: `url("${STEP4}")` }}>
                                     Шаг 4
                                 </div>
+
+                                {/* <div className={styles.step_detail_info_text}>
+                                    Шаг 4
+                                </div> */}
                                 <p className={styles.step_detail_info_title}>Заказ отправляется вместе с документами</p>
                             </div>
                         </div>

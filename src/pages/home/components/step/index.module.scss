@@ -33,6 +33,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 
 .step_detail_info_container {
@@ -50,17 +51,26 @@
   justify-content: center;
   align-items: center;
   color: white;
+  margin-bottom: 10px;
+  background-size: 150px 150px;
   font-weight: 500;
   font-size: 20px;
   font-family: inter-semibold;
-  background-color: black;
-  margin-bottom: 10px;
-  background-size: 150px 150px; 
 }
 
 .step_detail_img {
   width: 150px;
   height: 150px;
+}
+
+.step_detail_info_text {
+  color: white;
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .step_detail_info_title {
