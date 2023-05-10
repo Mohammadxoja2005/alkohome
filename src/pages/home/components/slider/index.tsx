@@ -31,7 +31,6 @@ const arrOfSlides: Array<{ id: number, img: string }> = [
 ]
 
 const SLIDER: FC = () => {
-    // need to add pagination
     useEffect(() => {
 
         const slides = document.querySelectorAll('[data-name="slide"]');

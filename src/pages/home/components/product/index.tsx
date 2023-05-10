@@ -2,7 +2,7 @@ import React, { Fragment, FC, useState, useEffect, useRef } from 'react';
 // styles
 import styles from "./index.module.scss";
 // images
-import PRODUCTLIST from "../../../../assets/images/product.png";
+import PRODUCTLIST from "../../../../assets/images/product6.png";
 import ZERNS from "../../../../assets/images/zerns.png"
 import FRUITS from "../../../../assets/images/fruits.png"
 import SPIRTS from "../../../../assets/images/spirts.png"
