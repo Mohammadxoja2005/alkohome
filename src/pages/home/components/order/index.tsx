@@ -71,18 +71,6 @@ const ORDER: FC = () => {
                         })}
                     </Swiper>
 
-                    {/* <div className={styles.order_list}>
-                        {products && products.map((product) => {
-                            return (
-                                <div key={product.id} className={styles.order_product}>
-                                    <h3 className={styles.order_product_title}>{product.name}</h3>
-                                    <img className={styles.order_product_img} src={product.img} alt="" />
-                                    <div className={styles.order_product_btn}>Заказать</div>
-                                </div>
-                            )
-                        })}
-                    </div> */}
-
                 </div>
             </section>
             <VECTORBEER />

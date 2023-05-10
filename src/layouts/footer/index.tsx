@@ -9,21 +9,23 @@ import TELEGRAM from "../../assets/icons/bgtelegram.png";
 // layouts
 import FIRSTRAWIMG from '../../layouts/firstrawimg';
 import SECONDRAWIMG from '../seconrawimg';
+// anchorlink
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 const FOOTER: FC = () => {
     return (
-        <Fragment> 
+        <Fragment>
             <FIRSTRAWIMG />
             <section className={styles.footer} id='contact'>
                 <div className={styles.footer_container}>
 
                     <div className={styles.footer_navigation}>
                         <nav className={styles.footer_nav_links}>
-                            <a className={styles.footer_nav_link} href="#">Главная</a>
-                            <a className={styles.footer_nav_link} href="#">Каталог</a>
-                            <a className={styles.footer_nav_link} href="#">Каталог</a>
-                            <a className={styles.footer_nav_link} href="#">Контакты</a>
-                            <a className={styles.footer_nav_link} href="#">Купить</a>
+                            <AnchorLink className={styles.footer_nav_link} href="#main">Главная</AnchorLink>
+                            <AnchorLink className={styles.footer_nav_link} href="#catalog">Каталог</AnchorLink>
+                            <AnchorLink className={styles.footer_nav_link} href="#review">Каталог</AnchorLink>
+                            <AnchorLink className={styles.footer_nav_link} href="#contact">Контакты</AnchorLink>
+                            <AnchorLink className={styles.footer_nav_link} href="#buy">Купить</AnchorLink>
                         </nav>
                         <p className={styles.footer_document}>ИНН 7710912420 ОГРН 1127746354394 ООО «Деловой мир Москва»</p>
                     </div>
