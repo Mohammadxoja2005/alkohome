@@ -3,8 +3,8 @@ import React, { FC, Fragment } from "react";
 import styles from "./index.module.scss";
 // images
 import WILDBERRIES from "../../../../assets/images/wildberries.png"
-import OZON from "../../../../assets/images/yandexmarket.png"
-import YANDEXMARKET from "../../../../assets/images/ozon.png"
+import OZON from "../../../../assets/images/ozon.png"
+import YANDEXMARKET from "../../../../assets/images/yandexmarket.png"
 // layouts
 import VECTORBEER from "../../../../layouts/vectorbeer";
 // swiper
@@ -15,24 +15,27 @@ import "swiper/css/pagination";
 
 const ORDER: FC = () => {
 
-    const products: Array<{ id: number, name: string, img: string }> = [
+    const products: Array<{ id: number, name: string, img: string, link: string }> = [
         {
             id: 1,
             name: 'Wildberries',
             img: WILDBERRIES,
+            link: "https://www.wildberries.ru/brands/alkohome"
 
         },
         {
             id: 2,
             name: 'Yandex Market',
             img: YANDEXMARKET,
+            link: ""
+
 
         },
         {
             id: 3,
             name: 'Ozon',
             img: OZON,
-
+            link: "https://www.ozon.ru/brand/alkohome-100860826/"
         },
     ]
 
@@ -48,7 +51,7 @@ const ORDER: FC = () => {
                         breakpoints={{
                             798: {
                                 slidesPerView: 3
-                            }, 
+                            },
                             480: {
                                 slidesPerView: 2.2
                             },
@@ -63,7 +66,7 @@ const ORDER: FC = () => {
                                     <div key={product.id} className={styles.order_product}>
                                         <h3 className={styles.order_product_title}>{product.name}</h3>
                                         <img className={styles.order_product_img} src={product.img} alt="" />
-                                        <div className={styles.order_product_btn}>Заказать</div>
+                                        <a className={styles.order_product_btn} href={product.link}>Заказать</a>
                                     </div>
                                 </SwiperSlide>
                             )

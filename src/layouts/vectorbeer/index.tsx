@@ -8,6 +8,7 @@ const VECTORBEER: FC = () => {
   return (
     <section className={styles.pattern}>
       <img className={styles.pattern_img} src={PATTERNRAW} alt="pattern" title='nice pattern' />
+      <img className={styles.pattern_img} src={PATTERNRAW} alt="pattern" title='nice pattern' />
     </section>
   )
 }

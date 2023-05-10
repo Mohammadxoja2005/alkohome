@@ -15,6 +15,38 @@ import 'swiper/css';
 SwiperCore.use([Autoplay, Navigation]);
 
 const REVIEW: FC = () => {
+
+    const data: Array<{ id: number, name: string, organization: string, text: string, img: string }> = [
+        {
+            id: 1,
+            name: "Аркадий",
+            organization: "",
+            text: "Топовые дрожи, рекомендую",
+            img: ""
+        },
+        {
+            id: 2,
+            name: "Владимир",
+            organization: "",
+            text: "Всё супер",
+            img: ""
+        },
+        {
+            id: 3,
+            name: "Дмитрий",
+            organization: "",
+            text: "Дрожжи Бомбические взял их для пробы и не прогадал, начинают работать через 30 мин",
+            img: ""
+        },
+        {
+            id: 4,
+            name: "Александр",
+            organization: "",
+            text: "Уже работают и радуют!",
+            img: ""
+        },
+    ]
+
     return (
         <Fragment>
             <section className={styles.rev} id='review'>
@@ -38,17 +70,17 @@ const REVIEW: FC = () => {
                                 },
                                 0: {
                                     slidesPerView: 1.2,
-                                }, 
+                                },
                                 480: {
                                     slidesPerView: 1,
                                 }
                                 // when window width is >= 1024px
                             }}
                         >
-                            {[1, 2, 3].map(() => {
+                            {data.map(review => {
                                 return (
                                     <SwiperSlide>
-                                        <div className={styles.rev_card}>
+                                        <div key={review.id} className={styles.rev_card}>
                                             <div className={styles.rev_card_profile}>
                                                 <div className={styles.rev_card_img_container}>
                                                     <img
@@ -59,7 +91,7 @@ const REVIEW: FC = () => {
                                                 </div>
                                                 <div className={styles.ref_card_info}>
                                                     <h3 className={styles.ref_profile_fullname}>
-                                                        Имя Фамилия
+                                                        {review.name}
                                                     </h3>
                                                     <h4 className={styles.ref_profile_job}>
                                                         Организация/Сфера деятельности
@@ -68,9 +100,7 @@ const REVIEW: FC = () => {
                                             </div>
 
                                             <div className={styles.rev_card_des}>
-                                                Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст
-                                                Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст
-                                                Текст Текст
+                                                {review.text}
                                             </div>
                                         </div>
                                     </SwiperSlide>

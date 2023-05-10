@@ -3,11 +3,11 @@
   max-width: 1440px;
   margin: auto;
   overflow: hidden;
+  display: flex;
 }
 
 @media screen and (min-width: 1281px) {
   .pattern_img {
-    width: 100%;
     object-fit: contain;
   }
 }

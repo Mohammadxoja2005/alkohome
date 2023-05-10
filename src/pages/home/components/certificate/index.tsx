@@ -2,8 +2,8 @@ import React, { FC, useState, useEffect, useRef } from 'react'
 // styles
 import styles from "./index.module.scss";
 // images
-import SERTIFCATE3 from "../.././../../assets/images/certificate3.png";
-import SERTIFCATE4 from "../.././../../assets/images/certificate4.png";
+import SERTIFCATE3 from "../.././../../assets/images/document1.jpeg";
+import SERTIFCATE4 from "../.././../../assets/images/document2.jpg";
 // icons
 import CLOSE from '../../../../assets/icons/close.svg';
 import SEARCH from "../../../../assets/icons/search.svg";

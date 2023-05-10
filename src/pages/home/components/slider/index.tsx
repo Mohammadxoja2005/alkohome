@@ -99,17 +99,13 @@ const SLIDER: FC = () => {
                     })
 
                     }
-                    {/* <div data-name="slide">
-                        <img src={SLIDER3} alt="" className={styles.slider_slide_img} />
-                    </div>
-                    <div data-name="slide">
-                        <img src={SLIDER1} alt="" className={styles.slider_slide_img} />
-                    </div> */}
+
                 </div>
 
                 <Swiper
                     slidesPerView={2.2}
                     spaceBetween={5}
+                    autoplay={{ delay: 3000 }}
                     className={styles.swiper_slide}>
                     {arrOfSlides.map((slide) => {
                         return (
@@ -122,21 +118,11 @@ const SLIDER: FC = () => {
                     })
 
                     }
-                    {/* <SwiperSlide>
-                        <div className={styles.swiper_slide_div}>
-                            <img src={SLIDER2} alt="" className={styles.swiper_slide_img} />
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className={styles.swiper_slide_div}>
-                            <img src={SLIDER2} alt="" className={styles.swiper_slide_img} />
-                        </div>
-                    </SwiperSlide> */}
                 </Swiper>
 
                 <CONTACTFORM />
             </div>
-        </section>
+        </section >
     )
 }
 
