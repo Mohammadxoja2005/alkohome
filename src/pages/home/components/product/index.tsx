@@ -105,7 +105,7 @@ const PRODUCT: FC = () => {
                                     <img className={styles.product_single_img} src={product.img} alt="" />
                                     <h3 className={styles.product_single_name}>{product.name}</h3>
                                     <p className={styles.product_single_des}>
-                                        {product.description.slice(0, 90)}...
+                                        {product.description.slice(0, 90)} <span onClick={() => submitInfo(product.name, product.description)} style={{ cursor: "pointer" }}>...</span>
                                     </p>
                                     <div className={styles.product_single_detail_btn} onClick={() => submitInfo(product.name, product.description)}>
                                         Подробнее

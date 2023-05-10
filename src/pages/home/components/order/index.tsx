@@ -27,9 +27,7 @@ const ORDER: FC = () => {
             id: 2,
             name: 'Yandex Market',
             img: YANDEXMARKET,
-            link: ""
-
-
+            link: "https://market.yandex.ru/product--turbo-drozhzhi-48-100gr/1858077081?sku=102014744113&cpa=1"
         },
         {
             id: 3,
