@@ -2,12 +2,12 @@ import React, { Fragment, FC, useState, useEffect, useRef } from 'react';
 // styles
 import styles from "./index.module.scss";
 // images
-import PRODUCTLIST from "../../../../assets/images/product6.png";
-import ZERNS from "../../../../assets/images/zerns.png"
-import FRUITS from "../../../../assets/images/fruits.png"
-import SPIRTS from "../../../../assets/images/spirts.png"
-import PRODUCT4 from "../../../../assets/images/prodcuct3.png";
-import PRODUCT5 from "../../../../assets/images/product4.png";
+import PRODUCTLIST from "../../../../assets/images/product_6.png";
+import ZERNS from "../../../../assets/images/product_1.png"
+import FRUITS from "../../../../assets/images/product_2.png"
+import SPIRTS from "../../../../assets/images/product_3.png"
+import PRODUCT4 from "../../../../assets/images/product_4.png";
+import PRODUCT5 from "../../../../assets/images/product_5.png";
 // layouts 
 import VECTORBEER from '../../../../layouts/vectorbeer';
 // icons
