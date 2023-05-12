@@ -48,7 +48,7 @@ const PRODUCT: FC = () => {
         {
             id: 6,
             name: 'Мегапак Турбо дрожжи 48',
-            description: 'Дрожжи для самогона, для сахарных браг, спиртовые, мощные спиртоустойчивые дрожжи.Славятся',
+            description: 'Мегапак Турбо дрожжи ALKOHOME 48 спиртовые. Дрожжи для самогона, для сахарных браг, спиртовые, мощные спиртоустойчивые дрожжи.Славятся своей универсальностью, неприхотливостью и невероятно быстрыми и качественными результатами брожения. Дрожжи ALKOHOME 48 гарантированно сбродят любой материал за 48 часов при соблюдении инструкции.',
             img: PRODUCTLIST
         },
     ]
@@ -106,14 +106,28 @@ const PRODUCT: FC = () => {
                                 <div
                                     key={product.id}
                                     className={styles.product_single}
-                                    onMouseEnter={() => setHoveredElement(product.id)}
-                                    onMouseLeave={() => setHoveredElement(null)}
                                 >
                                     <img className={styles.product_single_img} src={product.img} alt="" />
                                     <h3 className={styles.product_single_name}>{product.name}</h3>
-                                    <p className={styles.product_single_des}>
-                                        {isHovered ? product.description : product.description.slice(0, 90)}
-                                    </p>
+
+                                    {isHovered ?
+
+                                        <p
+                                            onMouseLeave={() => setHoveredElement(null)}
+                                            className={styles.product_single_des}>
+                                            {product.description}
+                                        </p> :
+
+                                        <p className={styles.product_single_des}>
+                                            {product.description.slice(0, 90)}.
+
+                                            <span
+                                                style={{ cursor: "pointer" }}
+                                                onMouseEnter={() => setHoveredElement(product.id)}
+                                                className={styles.product_single_des}>Читать дальше...</span>
+                                        </p>}
+
+
                                     <div className={styles.product_single_detail_btn} onClick={() => submitInfo(product.name, product.description)}>
                                         Подробнее
                                     </div>

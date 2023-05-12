@@ -19,6 +19,9 @@ const CONTACTFORM: FC = () => {
             .then((response) => {
                 console.log(response);
             })
+            .then(() => {
+                window.location.reload();
+            })
     }
 
     return (

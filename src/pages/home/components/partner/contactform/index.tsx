@@ -3,8 +3,28 @@ import React, { FC } from 'react'
 import styles from "./index.module.scss";
 // icons
 import NEXTARROW from "../../../../../assets/icons/arrownext.png";
+// axios
+import axios from "axios";
 
 const CONTACTFORM: FC = () => {
+
+    const onSubmit = (e: any) => {
+        e.preventDefault();
+
+        axios.post('https://formsubmit.co/muhammadxoja.2005@gmail.com')
+            .then((response) => {
+                console.log(response);
+            })
+
+        axios.post('https://formsubmit.co/muhammadxojaofficial@gmail.com')
+            .then((response) => {
+                console.log(response);
+            })
+            .then(() => {
+                window.location.reload();
+            })
+    }
+
     return (
         <form action="https://formsubmit.co/info@alkohome.com" method="POST" className={styles.form}>
             <input className={styles.form_input} name="name" type="text" placeholder='Ф.И.О.' />
@@ -16,7 +36,7 @@ const CONTACTFORM: FC = () => {
                 <label className={styles.form_chckbox_title} htmlFor="checkbox">Вы соглашаетесь с условиями обработки персональных данных</label>
             </div>
 
-            <button type='submit' className={styles.form_btn}>Оставить заявку <span className={styles.form_btn_next_icon}><img src={NEXTARROW} alt="" /></span></button>
+            <button onClick={onSubmit} className={styles.form_btn}>Оставить заявку <span className={styles.form_btn_next_icon}><img src={NEXTARROW} alt="" /></span></button>
         </form>
     )
 }
