@@ -29,6 +29,9 @@ const FOOTER: FC = () => {
                         </nav>
                         <p className={styles.footer_document}>ИНН 7710912420   ОГРН 1127746354394   ООО «Деловой мир Москва»
                             ТУ 10.89.13-001-09763834-2023</p>
+                        <p className={styles.footer_document_for_contact}>Телефон  - 8 (495) 764-35-08  </p>
+                        <p className={styles.footer_document_for_contact}> Почта – info@alkohome.com </p>
+
                     </div>
 
                     <div className={styles.footer_contact}>
