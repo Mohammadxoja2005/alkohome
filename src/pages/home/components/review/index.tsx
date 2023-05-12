@@ -4,8 +4,14 @@ import BUILDING from '../../../../assets/images/buildin.png';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Autoplay, Navigation } from 'swiper';
 // icons
-import NEXT from "../../../../assets/icons/next.png"
-import PREV from "../../../../assets/icons/prev.svg"
+import NEXT from "../../../../assets/icons/next.png";
+import PREV from "../../../../assets/icons/prev.svg";
+import STAR from "../../../../assets/icons/star.png";
+import DATE from "../../../../assets/icons/date.png";
+import TIME from "../../../../assets/icons/time.png";
+import YANDEXREVIEW from "../../../../assets/icons/yandex_review.png";
+import OZON_REVIEW from "../../../../assets/icons/ozon_review.png";
+import WILDBERRIES_REVIEW from "../../../../assets/icons/wildberries_review.png";
 // layouts
 import VECTORBEER from '../../../../layouts/vectorbeer';
 
@@ -16,34 +22,42 @@ SwiperCore.use([Autoplay, Navigation]);
 
 const REVIEW: FC = () => {
 
-    const data: Array<{ id: number, name: string, organization: string, text: string, img: string }> = [
+    const data: Array<{ id: number, name: string, organization: string, text: string, date: string, time: string, img: string, }> = [
         {
             id: 1,
             name: "Аркадий",
             organization: "",
             text: "Топовые дрожи, рекомендую",
-            img: ""
+            time: "22:30",
+            date: "15.02",
+            img: OZON_REVIEW
         },
         {
             id: 2,
             name: "Владимир",
             organization: "",
             text: "Всё супер",
-            img: ""
+            time: "11:33",
+            date: "19.02",
+            img: WILDBERRIES_REVIEW
         },
         {
             id: 3,
             name: "Дмитрий",
             organization: "",
             text: "Дрожжи Бомбические взял их для пробы и не прогадал, начинают работать через 30 мин",
-            img: ""
+            time: "12:50",
+            date: "19.03",
+            img: YANDEXREVIEW
         },
         {
             id: 4,
             name: "Александр",
             organization: "",
             text: "Уже работают и радуют!",
-            img: ""
+            time: "13:48",
+            date: "21.03",
+            img: WILDBERRIES_REVIEW
         },
     ]
 
@@ -84,7 +98,7 @@ const REVIEW: FC = () => {
                                             <div className={styles.rev_card_profile}>
                                                 <div className={styles.rev_card_img_container}>
                                                     <img
-                                                        src={BUILDING}
+                                                        src={review.img}
                                                         alt="building"
                                                         className={styles.ref_card_img}
                                                     />
@@ -93,9 +107,25 @@ const REVIEW: FC = () => {
                                                     <h3 className={styles.ref_profile_fullname}>
                                                         {review.name}
                                                     </h3>
-                                                    <h4 className={styles.ref_profile_job}>
-                                                        {review.organization}
-                                                    </h4>
+                                                    <div className={styles.rev_profile_star}>
+                                                        {[1, 2, 3, 4, 5].map(() => {
+                                                            return (
+                                                                <img src={STAR} alt="review star of alkohome" />
+                                                            )
+                                                        })}
+                                                    </div>
+
+                                                    <div className={styles.ref_profile_job}>
+                                                        {/* {review.organization} */}
+                                                        <div className={styles.rev_profile_date}>
+                                                            <img src={DATE} alt="" />
+                                                            <p>{review.date}</p>
+                                                        </div>
+                                                        <div className={styles.rev_profile_date}>
+                                                            <img src={TIME} alt="" />
+                                                            <p>{review.time}</p>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
 

@@ -46,6 +46,7 @@
   display: flex;
   align-items: center;
   gap: 20px;
+  width: 100%;
 }
 
 .rev_card_img_container {
@@ -63,6 +64,8 @@
 .ref_card_info {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  width: 80%;
 }
 
 .ref_profile_fullname {
@@ -73,10 +76,27 @@
 }
 
 .ref_profile_job {
-  font-size: 20px;
-  font-family: inter-bold;
-  font-weight: 700;
+  display: flex;
+
+  font-size: 16px;
+  font-family: inter-regular;
+  font-weight: 300;
   max-width: 300px;
+  gap: 10px;
+  align-self: flex-end;
+}
+
+.rev_profile_date {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.rev_profile_star {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 10px;
 }
 
 .rev_card_des {
@@ -100,7 +120,7 @@
   max-width: 1280px;
   margin: auto;
   gap: 20px;
-} 
+}
 
 @media screen and (max-width: 1280px) {
   .rev_title {
@@ -155,7 +175,7 @@
   }
 
   .rev_card_des {
-    font-size: 14px; 
+    font-size: 14px;
   }
 
   .prev_button {
@@ -165,7 +185,7 @@
   .next_button {
     display: none;
   }
-} 
+}
 
 @media screen and (max-width: 360px) {
   .rev_title {
