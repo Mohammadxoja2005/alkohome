@@ -27,17 +27,18 @@ const FOOTER: FC = () => {
                             <AnchorLink className={styles.footer_nav_link} href="#contact">Контакты</AnchorLink>
                             <AnchorLink className={styles.footer_nav_link} href="#buy">Купить</AnchorLink>
                         </nav>
-                        <p className={styles.footer_document}>ИНН 7710912420 ОГРН 1127746354394 ООО «Деловой мир Москва»</p>
+                        <p className={styles.footer_document}>ИНН 7710912420   ОГРН 1127746354394   ООО «Деловой мир Москва»
+                            ТУ 10.89.13-001-09763834-2023</p>
                     </div>
 
                     <div className={styles.footer_contact}>
                         <p className={styles.footer_contact_title}>Свяжитесь с нами</p>
 
                         <div className={styles.footer_contact_socials}>
-                            <img src={CALL} alt="call" />
-                            <img src={SMS} alt="sms" />
-                            <img src={VK} alt="vk" />
-                            <img src={TELEGRAM} alt="telegram" />
+                            <a target="_blank" href="tel:+998903580505"><img src={CALL} alt="phone" title='call us' className={styles.header_social} /></a>
+                            <a target="_blank" href="mailto:example@example.com"><img src={SMS} alt="email" title='email us' className={styles.header_social} /></a>
+                            <a target="_blank" href="https://vk.com/public219158476"><img src={VK} alt="vk" title='we are on vk' className={styles.header_social} /></a>
+                            <a target='_blank' href="https://t.me/+jLtSnJ-3Ye80NGQy"><img src={TELEGRAM} alt="telegram" title='we on telegram' className={styles.header_social} /></a>
                         </div>
                     </div>
                 </div>

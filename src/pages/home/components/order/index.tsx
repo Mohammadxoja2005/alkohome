@@ -64,7 +64,7 @@ const ORDER: FC = () => {
                                     <div key={product.id} className={styles.order_product}>
                                         <h3 className={styles.order_product_title}>{product.name}</h3>
                                         <img className={styles.order_product_img} src={product.img} alt="" />
-                                        <a className={styles.order_product_btn} href={product.link}>Заказать</a>
+                                        <a target="_blank" className={styles.order_product_btn} href={product.link}>Заказать</a>
                                     </div>
                                 </SwiperSlide>
                             )
