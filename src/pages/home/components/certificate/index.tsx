@@ -29,6 +29,8 @@ const CERTIFICATE: FC = () => {
         })
     }, [isOpen]);
 
+    console.log(imgPath);
+
     return (
         <section className={styles.ser}>
             <div className={styles.ser_container}>
@@ -36,20 +38,26 @@ const CERTIFICATE: FC = () => {
                 <h2 className={styles.ser_title}>Наш продукт сертифицирован</h2>
 
                 <div className={styles.ser_img_container} >
-                    <div onClick={() => setIsOpen(true)} className={styles.ser_img}>
+                    <div onClick={(e) => {
+                        setIsOpen(true)
+                        setImgPath(SERTIFCATE3)
+                    }} className={styles.ser_img}>
                         <img className={styles.ser_img_open} src={SEARCH} alt="open" />
-                        <img className={styles.ser_img_img} onClick={(e: any) => setImgPath(e.target.src)} src={SERTIFCATE3} alt="alco sertificate" />
+                        <img className={styles.ser_img_img} src={SERTIFCATE3} alt="alco sertificate" />
                     </div>
-                    <div onClick={() => setIsOpen(true)} className={styles.ser_img}>
+                    <div onClick={(e) => {
+                        setIsOpen(true)
+                        setImgPath(SERTIFCATE4)
+                    }} className={styles.ser_img}>
                         <img className={styles.ser_img_open} src={SEARCH} alt="open" />
-                        <img className={styles.ser_img_img} onClick={(e: any) => setImgPath(e.target.src)} src={SERTIFCATE4} alt="alco sertificate" />
+                        <img className={styles.ser_img_img} src={SERTIFCATE4} alt="alco sertificate" />
                     </div>
                     {/* <div onClick={() => setIsOpen(true)} className={styles.ser_img}><img onClick={(e: any) => setImgPath(e.target.src)} src={SERTIFCATE3} alt="alco sertificate" /></div>
                     <div onClick={() => setIsOpen(true)} className={styles.ser_img}><img onClick={(e: any) => setImgPath(e.target.src)} src={SERTIFCATE4} alt="alco sertificate" /></div> */}
                 </div>
             </div>
 
-            {isOpen ? <div ref={serModal} className={styles.ser_modal}>
+            {isOpen && imgPath.length > 0 ? <div ref={serModal} className={styles.ser_modal}>
                 <img onClick={() => setIsOpen(false)} className={styles.ser_modal_close} src={CLOSE} alt="" />
                 <div ref={serModalImgContainer} className={styles.ser_modal_img_container}>
                     <img className={styles.ser_modal_img} src={imgPath} alt="ser_img" />
