@@ -20,28 +20,28 @@ const REVIEW: FC = () => {
         {
             id: 1,
             name: "Аркадий",
-            organization: "",
+            organization: "Профессионал в области продуктов питания и напитков",
             text: "Топовые дрожи, рекомендую",
             img: ""
         },
         {
             id: 2,
             name: "Владимир",
-            organization: "",
+            organization: "Энтузиасты алкогольной тематики",
             text: "Всё супер",
             img: ""
         },
         {
             id: 3,
             name: "Дмитрий",
-            organization: "",
+            organization: "Члены алкогольных организаций, таких как винные клубы",
             text: "Дрожжи Бомбические взял их для пробы и не прогадал, начинают работать через 30 мин",
             img: ""
         },
         {
             id: 4,
             name: "Александр",
-            organization: "",
+            organization: "Медицинские специалисты специализирующиеся на алкогольных темах",
             text: "Уже работают и радуют!",
             img: ""
         },
@@ -94,7 +94,7 @@ const REVIEW: FC = () => {
                                                         {review.name}
                                                     </h3>
                                                     <h4 className={styles.ref_profile_job}>
-                                                        Организация/Сфера деятельности
+                                                        {review.organization}
                                                     </h4>
                                                 </div>
                                             </div>
