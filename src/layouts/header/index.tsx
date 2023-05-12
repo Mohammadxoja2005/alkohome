@@ -76,10 +76,10 @@ const HEADER: FC = () => {
                 <div className={styles.header_contact}>
                     <h3 className={styles.header_contact_name}>Свяжитесь с нами</h3>
                     <div className={styles.header_contact_socials}>
-                        <img src={PHONE} alt="phone" title='call us' className={styles.header_social} />
-                        <img src={SMS} alt="email" title='email us' className={styles.header_social} />
-                        <img src={VK} alt="vk" title='we are on vk' className={styles.header_social} />
-                        <img src={TELEGRAM} alt="telegram" title='we on telegram' className={styles.header_social} />
+                        <a target="_blank" href="tel:+998903580505"><img src={PHONE} alt="phone" title='call us' className={styles.header_social} /></a>
+                        <a target="_blank" href="mailto:example@example.com"><img src={SMS} alt="email" title='email us' className={styles.header_social} /></a>
+                        <a target="_blank" href="https://vk.com/public219158476"><img src={VK} alt="vk" title='we are on vk' className={styles.header_social} /></a>
+                        <a target='_blank' href="https://t.me/+jLtSnJ-3Ye80NGQy"><img src={TELEGRAM} alt="telegram" title='we on telegram' className={styles.header_social} /></a>
                     </div>
                 </div>
             </div> : null}
