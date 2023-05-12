@@ -87,6 +87,7 @@ const HEADER: FC = () => {
 
             <section className={styles.pattern}>
                 <img src={RAW1} alt="pattern" className={styles.pattern_img} />
+                <img src={RAW1} alt="pattern" className={styles.pattern_img} />
                 <img src={RAW6} alt="pattern" className={styles.pattern_img_addition} />
             </section>
         </Fragment>

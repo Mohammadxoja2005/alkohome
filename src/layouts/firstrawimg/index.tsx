@@ -8,6 +8,7 @@ const FIRSTRAWIMG: FC = () => {
     return (
         <section className={styles.firstraw}>
             <img className={styles.firstraw_img} src={RAW4} alt="pattern" title='nice pattern' />
+            <img className={styles.firstraw_img} src={RAW4} alt="pattern" title='nice pattern' />
         </section>
     )
 }

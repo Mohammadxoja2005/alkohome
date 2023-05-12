@@ -8,6 +8,7 @@ const SECONDRAWIMG = () => {
   return (
     <section className={styles.secondraw}>
       <img className={styles.secondraw_img} src={RAW5} alt="pattern" title='nice pattern' />
+      <img className={styles.secondraw_img} src={RAW5} alt="pattern" title='nice pattern' />
     </section>
   )
 }

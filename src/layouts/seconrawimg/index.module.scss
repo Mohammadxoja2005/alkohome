@@ -2,9 +2,11 @@
   width: 100%;
   max-width: 1440px;
   margin: auto;
+  display: flex;
+  overflow: hidden;
 }
 
 .secondraw_img {
-  width: 100%;
+  // width: 100%;
   object-fit: cover;
 }
