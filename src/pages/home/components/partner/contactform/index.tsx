@@ -11,12 +11,12 @@ const CONTACTFORM: FC = () => {
     const onSubmit = (e: any) => {
         e.preventDefault();
 
-        axios.post('https://formsubmit.co/muhammadxoja.2005@gmail.com')
+        axios.post('https://formsubmit.co/info@alkohome.com ')
             .then((response) => {
                 console.log(response);
             })
 
-        axios.post('https://formsubmit.co/muhammadxojaofficial@gmail.com')
+        axios.post('https://formsubmit.co/dannytseitlin@yandex.ru')
             .then((response) => {
                 console.log(response);
             })
