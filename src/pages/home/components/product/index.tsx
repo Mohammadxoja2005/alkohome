@@ -55,6 +55,7 @@ const PRODUCT: FC = () => {
 
     const [name, setName] = useState<string>('');
     const [des, setDes] = useState<string>('');
+    const [hoveredElement, setHoveredElement] = useState<number | null>(null);
 
     const submitInfo = (name: string, description: string): void => {
         setName(name)
@@ -100,12 +101,18 @@ const PRODUCT: FC = () => {
 
                     <div className={styles.product_list}>
                         {data && data.map(product => {
+                            const isHovered = hoveredElement === product.id;
                             return (
-                                <div key={product.id} className={styles.product_single}>
+                                <div
+                                    key={product.id}
+                                    className={styles.product_single}
+                                    onMouseEnter={() => setHoveredElement(product.id)}
+                                    onMouseLeave={() => setHoveredElement(null)}
+                                >
                                     <img className={styles.product_single_img} src={product.img} alt="" />
                                     <h3 className={styles.product_single_name}>{product.name}</h3>
                                     <p className={styles.product_single_des}>
-                                        {product.description.slice(0, 90)} <span onClick={() => submitInfo(product.name, product.description)} style={{ cursor: "pointer" }}>...</span>
+                                        {isHovered ? product.description : product.description.slice(0, 90)}
                                     </p>
                                     <div className={styles.product_single_detail_btn} onClick={() => submitInfo(product.name, product.description)}>
                                         Подробнее
